@@ -233,7 +233,7 @@ main {
 
 
 
-/* main content starts */
+/* main content starts i used grid here because it would be easier to lay out*/
 .trending-rentals{
      background-color: var(--Mbackground);  
      padding: 0 10px;
@@ -321,7 +321,7 @@ main {
 
 
 
-/* our team start */
+/* our team start i decided to use the property of flex for this section  */
 .sectionteam {  
     padding: 20px 10px;
 }
@@ -461,7 +461,7 @@ main {
 
 
 
-/* media quary */
+/* media quary to tranform the page from mobile to destop not apart of the reqirements but i still tried*/
 
 @media screen and (min-width: 1000px) {
     .nav-toggle-label {
@@ -472,10 +472,7 @@ main {
         display: grid;
         grid-template-columns: 1fr auto minmax(600px,3fr) 1fr;
     }
-    #logo{
-        grid-columns: 2 / span 1;
-
-    }
+ 
     nav {
         all: unset;
         grid-column: 3 / 4;

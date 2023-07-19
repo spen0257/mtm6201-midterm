@@ -18,21 +18,26 @@
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-    <!-- head starts here -->
+    <!-- head starts here  with a challenge of a burger menu without using js-->
 </head>
 
 <body>
 
-    <header>
-        
-        <nav role="navigation">
+    <header role="banner" id="top">
+        <ul class="skip-links">
+            <li><a href="#main-nav">Skip to main nav</a></li>
+            <li><a href="#main-content">Skip to main content</a></li>
+            <li><a href="#aboutus">Skip to meet the team</a></li>
+          </ul>
+        <!-- Created spans to emulate the burger -->
+        <nav id="main-nav" role="navigation">
             <div id="menuToggle">
                 <input type="checkbox" />
                 <span></span>
                 <span></span>
                 <span></span>
 
-            <ul id="menu">
+            <ul role="list" id="menu">
                 <li><a href="#menu-header">Home</a></li>
                 <li><a href="#rent">Services</a></li>
                 <li><a href="#discover">Discover</a></li>
@@ -49,7 +54,7 @@
             <button title="Notification" id="bell"><i class="fa-solid fa-bell"></i></button>
         </div>
 
-        <div id="logo" class="logo"><img src="image/logo.png" alt=""></div>
+        <div id="logo" class="logo"><img src="image/logo.png" alt="logo" aria-label="company-logo"></div>
 
         <div id="search">
 
@@ -57,24 +62,24 @@
         </div>
     </header> 
 
-    <main>
+    <main id="main-content" role="main">
         <!-- Take action starts -->
 
         <div class="action" id="rent">
-            <h2 class="action-text">Take Action</h2>
+            <h2 role="heading" class="action-text">Take Action</h2>
             <div class="action-items">
                 <div class="p-action">
-                    <img src="image/sell.jpg" alt="sell">
+                    <img aria-label="selling" src="image/sell.jpg" alt="sell">
                     <span>Sell</span>
                 </div>
 
                 <div class="p-action">
-                    <img src="image/rent.jpg" alt="rent">
+                    <img aria-label="renting" src="image/rent.jpg" alt="rent">
                     <span>Rent</span>
                 </div>
 
                 <div class="p-action">
-                    <img src="image/student.jpg" alt="login">
+                    <img aria-label="login-portal" src="image/student.jpg" alt="login">
                     <span>Student Login</span>
                 </div>
             </div>
@@ -192,7 +197,7 @@
     </main>
 
     <!-- discover section ends -->
-    <section class="sectionteam" id="aboutus">
+    <section class="sectionteam" id="aboutus" itemscope itemtype="https://schema.org/Person">
         <h2 class="s-team">Our Team</h2>
 
         <div class="line"></div>
@@ -201,24 +206,24 @@
         <div class="team-1">
             <img src="image/ceo.jpg" alt="john" />
             <div class="team-1info">
-                <h2>John Doe</h2>
-                <h3>CEO and Co-owner</h3>
+                <h2 itemprop="name">Stafan Ten</h2>
+                <h3 itemprop="jobTitle">CEO</h3>
                 <p>An ambitious and exquisite personality that always strives to exceed expectations.</p>
             </div>
         </div>
         <div class="team-1">
             <img src="image/coo.jpg" alt="john" />
             <div class="team-1info">
-                <h2>Olivia Manson</h2>
-                <h3>Coo</h3>
+                <h2 itemprop="name">Olivia Manson</h2>
+                <h3 itemprop="jobTitle">Coo</h3>
                 <p>An ambitious and exquisite personality that always strives to exceed expectations.</p>
             </div>
         </div>
         <div class="team-1">
             <img src="image/Pm.jpg" alt="john" />
             <div class="team-1info">
-                <h2>John Doe</h2>
-                <h3>CEO and Co-owner</h3>
+                <h2 itemprop="name">Ol Deems</h2>
+                <h3 itemprop="jobTitle">Project Manager and Co-owner</h3>
                 <p>An ambitious and exquisite personality that always strives to exceed expectations.</p>
             </div>
         </div>
@@ -226,8 +231,8 @@
 
     <section class="contact" id="contact">
         <div class="container">
-            <h1>Contact Us</h1>
-            <form>
+            <h1 role="heading">Contact Us</h1>
+            <form role="form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your name">
         
@@ -235,16 +240,15 @@
             <input type="email" id="email" name="email" placeholder="Your email">
         
             <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Type your message here"></textarea>
+            <textarea aria-label="sending your contact info in" id="message" name="message" placeholder="Type your message here"></textarea>
         
             <input type="submit" value="Submit">
             </form>
         </div>
     </section>
-
-    <div class="end-text">
-        <p>Copyright © @2022. All Rights Reserved.Designd By Ceejay Spencer.</p>
-    </div>
+    <footer>
+            <p>Copyright © @2022. All Rights Reserved.Designd By Ceejay Spencer.<a href="#top">Back to Top</a></p>
+    </footer>
 </body>
 
 </html>
