@@ -23,43 +23,31 @@
 
 <body>
 
-    <!-- <header>
-       <div><a href="#" class="logo"><img src="image/C (1).png" alt=""></a></div>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <nav>
-            <ul class="navmenu">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#aboutus">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#teams">Teams</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-        </label>
-
-    </header> -->
     <header>
-        <!-- <input type="checkbox" id="nav-toggle" class="nav-toggle"> -->
-        <nav role="navigation" class="navmenu">
+        
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+
             <ul id="menu">
                 <li><a href="#menu-header">Home</a></li>
-                <li><a href="#aboutus">About Us</a></li>
                 <li><a href="#rent">Services</a></li>
-                <li><a href="#sectionteam">Teams</a></li>
+                <li><a href="#discover">Discover</a></li>
+                <li><a href="#aboutus">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            </div>
         </nav>
 
-        <div class="menu-header" id="menu-header" >
-            <button title="Menu" id="menu1"><i class="fa-solid fa-bars"></i></button>
+        <div class="menu-header" id="menu-header">
+            <div>   
+
+            </div> 
             <button title="Notification" id="bell"><i class="fa-solid fa-bell"></i></button>
         </div>
-
-        <label id="nav-toggle">
-            <span></span>
-        </label>
 
         <div id="logo" class="logo"><img src="image/logo.png" alt=""></div>
 
@@ -67,12 +55,12 @@
 
             <input id="search-input" type="text" placeholder="Type here to search">
         </div>
-    </header>
+    </header> 
 
     <main>
         <!-- Take action starts -->
 
-        <div class="action">
+        <div class="action" id="rent">
             <h2 class="action-text">Take Action</h2>
             <div class="action-items">
                 <div class="p-action">
@@ -96,11 +84,10 @@
 
         <!-- discover section starts -->
 
-        <section class="trending-rentals" id="rent">
+        <section class="trending-rentals" id="discover">
             <div class="text">
                 <h2>Discover</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi velit, cupiditate ducimus obcaecati
-                    blanditiis rerum vitae itaque perferendis cum eveniet reprehenderit eos quaerat.</p>
+                <p> We invite you to explore a world of possibilities and uncover the latest listing trends, in student housing. </p>
             </div>
 
             <div class="products">
@@ -177,7 +164,6 @@
                     </div>
                 </div>
 
-
                 <div class="p-container">
                     <img src="image/2.jpg" alt="">
                     <div class="product-text">
@@ -206,18 +192,14 @@
     </main>
 
     <!-- discover section ends -->
-    <section id="#aboutus" class="sectionteam">
+    <section class="sectionteam" id="aboutus">
         <h2 class="s-team">Our Team</h2>
 
         <div class="line"></div>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna <br>
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis <br>
-            aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+        <p> We have assembled a team of highly skilled and passionate individuals who share a deep love for design and a commitment to delivering outstanding results.</p>
         <div class="team-1">
-            <img src="image/team-1.jpg" alt="john" />
+            <img src="image/ceo.jpg" alt="john" />
             <div class="team-1info">
                 <h2>John Doe</h2>
                 <h3>CEO and Co-owner</h3>
@@ -225,20 +207,38 @@
             </div>
         </div>
         <div class="team-1">
-            <img src="image/team-1.jpg" alt="john" />
+            <img src="image/coo.jpg" alt="john" />
+            <div class="team-1info">
+                <h2>Olivia Manson</h2>
+                <h3>Coo</h3>
+                <p>An ambitious and exquisite personality that always strives to exceed expectations.</p>
+            </div>
+        </div>
+        <div class="team-1">
+            <img src="image/Pm.jpg" alt="john" />
             <div class="team-1info">
                 <h2>John Doe</h2>
                 <h3>CEO and Co-owner</h3>
                 <p>An ambitious and exquisite personality that always strives to exceed expectations.</p>
             </div>
         </div>
-        <div class="team-1">
-            <img src="image/team-1.jpg" alt="john" />
-            <div class="team-1info">
-                <h2>John Doe</h2>
-                <h3>CEO and Co-owner</h3>
-                <p>An ambitious and exquisite personality that always strives to exceed expectations.</p>
-            </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email">
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Type your message here"></textarea>
+        
+            <input type="submit" value="Submit">
+            </form>
         </div>
     </section>
 
